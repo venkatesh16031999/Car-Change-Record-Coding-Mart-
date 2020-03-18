@@ -1,0 +1,45 @@
+.main{
+    height: 40vh;
+    box-shadow: 1px 1px 4px grey;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-image: url("./carback.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#carmove{
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    transition: all .3s;
+}
+
+#greencolor{
+    opacity: 0.3;
+}
+
+#redcolor{
+    opacity: 0.3;
+}
+
+button{
+    background: none;
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100px;
+    color: black;
+    font-weight: bold;
+    transition: .3s;
+}
+
+button:hover{
+    background: black;
+    color: white;
+}
+
+/* ::-webkit-scrollbar {
+    display: none;
+} */

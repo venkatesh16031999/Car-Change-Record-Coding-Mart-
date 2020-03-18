@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script> 
+    
+</head>
+<body>
+    
+    <div class="container" id="drop">
+        <div class="row d-flex justify-content-center mt-2">
+            <button v-on:click="start()">
+                start
+            </button>
+        </div>
+        <div class="row card main d-flex flex" >
+           
+            <div class="col-md-12" style="height: 100%;">
+                <div class="row" >
+                    <div class="col-md-4 d-flex justify-content-center wrapcar">
+                        <img src="./car-png-top-2.png" alt="" id="carmove" height="170px" width="300px">
+                     </div>
+                     <div class="col-md-6 d-flex justify-content-center">
+                         <div class="row">
+                            <div>
+                               &nbsp;
+                            </div>
+                         </div>
+                     </div>
+                     <div class="col-md-2 d-flex justify-content-center">
+                        &nbsp;
+                     </div>
+                </div>
+            </div>
+           
+        </div>
+        <br>
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-2 d-flex justify-content-center">
+                <button v-on:click="moveCar()">
+                    Move (Car) 
+                </button>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center">
+                <h3 >
+                    Cars Count : {{carcount}}
+                </h3>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center">
+                <h2>Signals : </h2>
+                    <img id="greencolor" src="https://1001freedownloads.s3.amazonaws.com/icon/thumb/641/Circle_Green.png" alt=""  height="50px" width="50px">
+                    <img id="redcolor" src="https://img.favpng.com/13/3/12/traffic-light-computer-icons-red-clip-art-png-favpng-vhpHNmi3NnQU7nF3eyWv5wqeB.jpg" alt=""  height="50px" width="50px">
+            </div>
+            <div class="col-md-3 d-flex justify-content-center"> 
+                <h4>Signal Change : {{msg}} </h4>
+            </div>
+        </div>
+        <br>
+        <div class="row d-flex justify-content-center">
+            <table class="table  justify-content-center" id="table" style="overflow-y: scroll;height: 270px;">
+                <thead class="thead-dark">
+                  <tr>
+                    <th width="300" scope="col">SI NO.</th>
+                    <th width="300" scope="col">Car Number</th>
+                    <th width="300" scope="col">Car Crossed Time</th>
+                    <th width="300" scope="col">Fine Amount</th>
+                  </tr>
+                </thead>
+                <tbody >
+                  <tr v-for="(car,index) in carmarked">
+                    <th  scope="row">{{index+1}}</th>
+                    <td  > TN 37 sd {{car.carCount}}</td>
+                    <td  > Time : {{car.carDuration}}</td>
+                    <td  > Rs.100</td>
+                  </tr>
+                </tbody>
+              </table>
+             
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
